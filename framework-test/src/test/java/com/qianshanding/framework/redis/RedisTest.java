@@ -23,10 +23,13 @@ public class RedisTest {
 
     @Test
     public void testGet() {
-        for (int i = 0; i <= 1000000; i++) {
+        long start = System.currentTimeMillis();
+        for (int i = 0; i <= 100000; i++) {
             redisClient.set("fish", "value");
             System.out.println(redisClient.get("fish"));
             redisClient.del("fish");
         }
+        long end = System.currentTimeMillis();
+        System.out.println(end - start);
     }
 }

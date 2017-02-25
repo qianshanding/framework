@@ -1,0 +1,14 @@
+#Maven
+bin
+target/
+.settings/
+.classpath
+.project
+*/.project
+*/.classpath
+
+# Intellij
+.idea
+*.iml
+*.iws
+*.ipr
