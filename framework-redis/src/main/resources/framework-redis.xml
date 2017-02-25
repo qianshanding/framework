@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns="http://www.springframework.org/schema/beans"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd   http://www.springframework.org/schema/cache http://www.springframework.org/schema/cache/spring-cache.xsd">
+
+    <bean id="jedisPool" class="redis.clients.jedis.JedisPool">
+        <constructor-arg index="0" ref="jedisPoolConfig"/>
+        <constructor-arg index="1" value="${jedis.ip}" type="java.lang.String"/>
+        <constructor-arg index="2" value="${jedis.port}" type="int"/>
+    </bean>
+
+    <bean id="jedisPoolConfig" class="redis.clients.jedis.JedisPoolConfig">
+        <property name="maxTotal" value="${jedis.pool.maxActive}"/>
+        <property name="maxIdle" value="${jedis.pool.maxIdle}"/>
+        <property name="maxWaitMillis" value="${jedis.pool.maxWait}"/>
+        <property name="testOnBorrow" value="${jedis.pool.testOnBorrow}"/>
+    </bean>
+
+    <bean id="redisClient" class="com.qianshanding.framework.redis.SimpleRedisClient">
+        <property name="jedisPool" ref="jedisPool"/>
+    </bean>
+</beans>

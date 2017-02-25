@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+
+<mapper namespace="com.qianshanding.framework.mybatis.mapper.UserMapper">
+
+    <sql id="tableName">
+        user
+    </sql>
+
+    <sql id="table_columns">
+        id, user_name, pass_word, gmt_create, gmt_update
+    </sql>
+
+    <resultMap id="resultMap" type="com.qianshanding.framework.mybatis.dataobject.UserDO">
+        <result column="id" property="id" jdbcType="INTEGER"/>
+        <result column="user_name" property="userName" jdbcType="VARCHAR"/>
+        <result column="pass_word" property="passWord" jdbcType="VARCHAR"/>
+        <result column="gmt_create" property="gmtCreate" jdbcType="TIMESTAMP"/>
+        <result column="gmt_update" property="gmtUpdate" jdbcType="TIMESTAMP"/>
+    </resultMap>
+
+    <select id="getById" resultMap="resultMap">
+        select
+        <include refid="table_columns"/>
+        from
+        <include refid="tableName"/>
+        where id= #{id} limit 1;
+    </select>
+
+    <insert id="insert" parameterType="com.qianshanding.framework.mybatis.dataobject.UserDO" useGeneratedKeys="true" keyProperty="id">
+        insert into
+        <include refid="tableName"/>
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            <if test="id != null">id,</if>
+            <if test="userName != null">user_name,</if>
+            <if test="passWord != null">pass_word,</if>
+            <if test="gmtCreate != null">gmt_create,</if>
+            <if test="gmtUpdate != null">gmt_update,</if>
+        </trim>
+        <trim prefix="values (" suffix=")" suffixOverrides=",">
+            <if test="id != null">#{id},</if>
+            <if test="userName != null">#{userName},</if>
+            <if test="passWord != null">#{passWord},</if>
+            <if test="gmtCreate != null">#{gmtCreate},</if>
+            <if test="gmtUpdate != null">#{gmtUpdate},</if>
+        </trim>
+    </insert>
+</mapper>
