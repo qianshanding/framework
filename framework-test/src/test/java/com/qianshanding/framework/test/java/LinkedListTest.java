@@ -4,7 +4,7 @@ import java.util.Iterator;
 import java.util.LinkedList;
 
 /**
- * Created by zhengyu on 2016/12/5.
+ * Created by fish on 2016/12/5.
  */
 public class LinkedListTest {
     public static void main(String[] srgs) {

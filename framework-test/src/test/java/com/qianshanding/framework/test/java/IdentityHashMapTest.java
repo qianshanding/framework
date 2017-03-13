@@ -6,7 +6,7 @@ import java.util.Map;
 /**
  * IdentityHashMap中，是判断key是否为同一个对象(同一个内存地址，同一个内存地址的对象会覆盖value)，
  * 而不是普通HashMap的equals方式判断
- * Created by zhengyu on 2016/11/24.
+ * Created by fish on 2016/11/24.
  */
 public class IdentityHashMapTest {
     public static void main(String[] args) {

@@ -6,7 +6,7 @@ import java.io.Serializable;
 import java.util.Date;
 
 /**
- * Created by zhengyu on 2016/11/11.
+ * Created by fish on 2016/11/11.
  */
 @Data
 public class UserDO implements Serializable {

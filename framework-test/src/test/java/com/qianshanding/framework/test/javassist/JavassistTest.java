@@ -10,7 +10,7 @@ import java.io.IOException;
 /**
  * javassist是一款字节码编辑工具，可以直接编辑和生成Java生成的字节码，以达到对.class文件进行动态修改的效果。
  * 熟练使用这套工具，可以让Java编程更接近与动态语言编程。
- * Created by zhengyu on 2016/11/24.
+ * Created by fish on 2016/11/24.
  */
 public class JavassistTest {
 

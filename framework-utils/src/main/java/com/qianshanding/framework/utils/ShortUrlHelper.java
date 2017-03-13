@@ -10,7 +10,7 @@ import java.util.zip.CRC32;
 import org.apache.commons.lang3.StringUtils;
 
 /**
- * Created by zhengyu on 2016/10/19.
+ * Created by fish on 2016/10/19.
  */
 public class ShortUrlHelper {
 

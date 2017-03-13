@@ -11,7 +11,7 @@ import org.springframework.test.context.support.DirtiesContextTestExecutionListe
 import javax.annotation.Resource;
 
 /**
- * Created by zhengyu on 2017/2/15.
+ * Created by fish on 2017/2/15.
  */
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration(locations = {"classpath*:spring-redis.xml"})

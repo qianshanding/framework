@@ -10,7 +10,7 @@ import org.springframework.test.context.support.DirtiesContextTestExecutionListe
 import java.util.Map;
 
 /**
- * Created by zhengyu
+ * Created by fish
  */
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration(locations = {"classpath*:spring-mybatis.xml"})

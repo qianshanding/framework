@@ -11,7 +11,7 @@ import java.util.Map;
 import java.util.Properties;
 
 /**
- * Created by zhengyu on 2016/10/19.
+ * Created by fish on 2016/10/19.
  */
 public class ConfigHelper {
     private static final Log logger = LogFactory.getLog(ValidHelper.class);

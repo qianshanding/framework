@@ -9,7 +9,7 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 /**
- * Created by zhengyu on 2016/10/19.
+ * Created by fish on 2016/10/19.
  */
 public class ValidHelper {
     private static final Log logger = LogFactory.getLog(ValidHelper.class);

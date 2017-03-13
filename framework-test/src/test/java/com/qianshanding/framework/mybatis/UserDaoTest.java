@@ -9,7 +9,7 @@ import javax.annotation.Resource;
 import java.util.Date;
 
 /**
- * Created by zhengyu on 2017/1/21.
+ * Created by fish on 2017/1/21.
  */
 public class UserDaoTest extends BasicSpringTest {
     @Resource

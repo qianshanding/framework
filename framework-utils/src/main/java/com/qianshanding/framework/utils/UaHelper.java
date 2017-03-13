@@ -1,7 +1,7 @@
 package com.qianshanding.framework.utils;
 
 /**
- * Created by zhengyu on 2017/1/23.
+ * Created by fish on 2017/1/23.
  */
 public class UaHelper {
 

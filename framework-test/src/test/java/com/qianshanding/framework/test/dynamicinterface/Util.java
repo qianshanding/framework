@@ -6,7 +6,7 @@ import java.lang.reflect.Method;
 import java.lang.reflect.Proxy;
 
 /**
- * Created by zhengyu on 2016/12/27.
+ * Created by fish on 2016/12/27.
  */
 public class Util {
     public static <T> T getInstance(Class<T> cl, Object instance) {
