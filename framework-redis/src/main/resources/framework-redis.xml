@@ -5,15 +5,16 @@
 
     <bean id="jedisPool" class="redis.clients.jedis.JedisPool">
         <constructor-arg index="0" ref="jedisPoolConfig"/>
-        <constructor-arg index="1" value="${jedis.ip}" type="java.lang.String"/>
-        <constructor-arg index="2" value="${jedis.port}" type="int"/>
+        <constructor-arg index="1" value="127.0.0.1" type="java.lang.String"/>
+        <constructor-arg index="2" value="6379" type="int"/>
     </bean>
 
     <bean id="jedisPoolConfig" class="redis.clients.jedis.JedisPoolConfig">
-        <property name="maxTotal" value="${jedis.pool.maxActive}"/>
-        <property name="maxIdle" value="${jedis.pool.maxIdle}"/>
-        <property name="maxWaitMillis" value="${jedis.pool.maxWait}"/>
-        <property name="testOnBorrow" value="${jedis.pool.testOnBorrow}"/>
+        <property name="maxTotal" value="50"/>
+        <property name="maxIdle" value="20"/>
+        <property name="minIdle" value="10"/>
+        <property name="maxWaitMillis" value="1000"/>
+        <property name="testOnBorrow" value="false"/>
     </bean>
 
     <bean id="redisClient" class="com.qsd.framework.redis.SimpleRedisClient">
