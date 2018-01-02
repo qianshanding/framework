@@ -4,7 +4,7 @@
 <configuration>
 
     <plugins>
-        <plugin interceptor="com.qianshanding.framework.mybatis.monitor.SqlMonitorPlugin">
+        <plugin interceptor="com.qsd.framework.mybatis.monitor.SqlMonitorPlugin">
             <!--是否监控-->
             <property name="sql_monitor" value="true"/>
             <!--是否打印SQL语句，默认为false -->

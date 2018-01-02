@@ -157,6 +157,25 @@
             <artifactId>jedis</artifactId>
         </dependency>
         <!-- redis end -->
+
+        <!-- webmagic start -->
+        <dependency>
+            <groupId>us.codecraft</groupId>
+            <artifactId>webmagic-core</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>us.codecraft</groupId>
+            <artifactId>webmagic-extension</artifactId>
+        </dependency>
+        <!-- webmagic start -->
+
+        <!-- dubbo start -->
+        <dependency>
+            <groupId>com.alibaba</groupId>
+            <artifactId>dubbo</artifactId>
+        </dependency>
+        <!-- dubbo end -->
     </dependencies>
 
     <build>

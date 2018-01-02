@@ -16,7 +16,7 @@
         <property name="testOnBorrow" value="${jedis.pool.testOnBorrow}"/>
     </bean>
 
-    <bean id="redisClient" class="com.qianshanding.framework.redis.SimpleRedisClient">
+    <bean id="redisClient" class="com.qsd.framework.redis.SimpleRedisClient">
         <property name="jedisPool" ref="jedisPool"/>
     </bean>
 </beans>
